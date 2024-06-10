@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  navigation
+//  Navigation1
 //
-//  Created by Елена Хайрова on 27.05.2024.
+//  Created by Елена Хайрова on 29.05.2024.
 //
 
 import UIKit
@@ -11,11 +11,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // fgh
-        
+        // Do any additional setup after loading the view.
     }
 
 
 }
 
-//fghh
