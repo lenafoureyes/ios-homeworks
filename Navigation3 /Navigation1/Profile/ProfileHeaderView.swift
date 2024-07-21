@@ -5,7 +5,6 @@
 //  Created by Елена Хайрова on 17.06.2024.
 //
 
-
 import UIKit
 
 class ProfileHeaderView: UIView {
