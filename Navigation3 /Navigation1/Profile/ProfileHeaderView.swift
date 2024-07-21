@@ -72,17 +72,6 @@ class ProfileHeaderView: UIView {
         addSubview(nameLabel)
         addSubview(descriptionLabel)
         addSubview(button)
-        setupButton()
-    }
-    
-    private func setupButton() {
-        addSubview(button)
-        NSLayoutConstraint.activate([
-            button.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 16),
-            button.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
-            button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
-            button.heightAnchor.constraint(equalToConstant: 50)
-        ])
     }
     
     private func setupConstraints() {
@@ -100,6 +89,10 @@ class ProfileHeaderView: UIView {
             descriptionLabel.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: 34),
             descriptionLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
             
+            button.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 16),
+            button.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+            button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+            button.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     
@@ -109,4 +102,3 @@ class ProfileHeaderView: UIView {
         }
     }
 }
-
