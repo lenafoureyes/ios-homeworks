@@ -27,8 +27,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let feedNavigationController = UINavigationController(rootViewController: FeedViewController())
         feedNavigationController.title = "Лента"
         
-        let profileNavigationController = UINavigationController(rootViewController: ProfileViewController())
+        let profileViewController = LogInViewController()
+        let profileNavigationController = UINavigationController(rootViewController: profileViewController)
         profileNavigationController.title = "Профиль"
+
+
         
         tabBarController.viewControllers = [profileNavigationController, feedNavigationController]
         
@@ -36,6 +39,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         profileNavigationController.tabBarItem = UITabBarItem(title: "профиль", image: UIImage(systemName: "person.circle"), tag: 1)
         
         tabBarController.selectedIndex = 1
+        
         
         window.rootViewController = tabBarController
         window.makeKeyAndVisible()
