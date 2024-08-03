@@ -25,7 +25,7 @@ class ProfileHeaderView: UIView {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         label.textColor = .black
-        label.text = "Cat"
+        label.text = "Meow_Master"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

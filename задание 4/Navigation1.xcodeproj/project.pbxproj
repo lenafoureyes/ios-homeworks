@@ -18,6 +18,8 @@
 		3126B84D2C075EF20078029A /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3126B84C2C075EF20078029A /* InfoViewController.swift */; };
 		3149F5482C52D593005FA37B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3149F5472C52D593005FA37B /* LogInViewController.swift */; };
 		314D39A92C2052A30074EDDD /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314D39A82C2052A30074EDDD /* ProfileHeaderView.swift */; };
+		31BE2B542C5D5A5400165C77 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE2B532C5D5A5400165C77 /* Post.swift */; };
+		31BE2B5A2C5E9E5600165C77 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE2B592C5E9E5600165C77 /* PostTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		3126B84C2C075EF20078029A /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		3149F5472C52D593005FA37B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		314D39A82C2052A30074EDDD /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		31BE2B532C5D5A5400165C77 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		31BE2B592C5E9E5600165C77 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +78,10 @@
 				3126B83D2C07593D0078029A /* LaunchScreen.storyboard */,
 				3126B8402C07593D0078029A /* Info.plist */,
 				3126B8482C075ABD0078029A /* FeedViewController.swift */,
+				31BE2B532C5D5A5400165C77 /* Post.swift */,
 				3126B84A2C075E260078029A /* PostViewController.swift */,
 				3126B84C2C075EF20078029A /* InfoViewController.swift */,
+				31BE2B592C5E9E5600165C77 /* PostTableViewCell.swift */,
 			);
 			path = Navigation1;
 			sourceTree = "<group>";
@@ -160,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31BE2B5A2C5E9E5600165C77 /* PostTableViewCell.swift in Sources */,
 				3126B84B2C075E260078029A /* PostViewController.swift in Sources */,
 				3126B8372C0759370078029A /* ViewController.swift in Sources */,
 				3149F5482C52D593005FA37B /* LogInViewController.swift in Sources */,
@@ -169,6 +176,7 @@
 				3126B8472C075AA20078029A /* ProfileViewController.swift in Sources */,
 				3126B8352C0759370078029A /* SceneDelegate.swift in Sources */,
 				314D39A92C2052A30074EDDD /* ProfileHeaderView.swift in Sources */,
+				31BE2B542C5D5A5400165C77 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
