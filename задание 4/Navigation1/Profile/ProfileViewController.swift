@@ -27,8 +27,11 @@ class ProfileViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(PostTableViewCell.self, forCellReuseIdentifier: "PostTableViewCell")
 
-        headerView = ProfileHeaderView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 250))
+        headerView = ProfileHeaderView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 400))
+        headerView?.navigationController = self.navigationController
         tableView.tableHeaderView = headerView
+        
+        
     }
 }
 
