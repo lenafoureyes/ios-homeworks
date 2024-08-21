@@ -10,29 +10,15 @@ import UIKit
 import UIKit
 
 class PhotosTableViewCell: UICollectionViewCell {
-    static var images: [UIImage] = [
-        UIImage(named: "cat1")!,
-        UIImage(named: "cat2")!,
-        UIImage(named: "cat3")!,
-        UIImage(named: "cat4")!,
-        UIImage(named: "cat5")!,
-        UIImage(named: "cat6")!,
-        UIImage(named: "cat7")!,
-        UIImage(named: "cat8")!,
-        UIImage(named: "cat9")!,
-        UIImage(named: "cat10")!,
-        UIImage(named: "cat11")!,
-        UIImage(named: "cat12")!,
-        UIImage(named: "cat13")!,
-        UIImage(named: "cat14")!,
-        UIImage(named: "cat15")!,
-        UIImage(named: "cat16")!,
-        UIImage(named: "cat17")!,
-        UIImage(named: "cat18")!,
-        UIImage(named: "cat19")!,
-        UIImage(named: "cat20")!,
-    ]
-    
+    static var images: [UIImage] = {
+        let imageNames = [
+            "cat1", "cat2", "cat3", "cat4", "cat5", "cat6", "cat7", "cat8",
+            "cat9", "cat10", "cat11", "cat12", "cat13", "cat14", "cat15",
+            "cat16", "cat17", "cat18", "cat19", "cat20"
+        ]
+        return imageNames.compactMap { UIImage(named: $0) }
+    }()
+
     static let reuseIdentifier = "PhotosTableViewCell"
     
     private let imageView: UIImageView = {

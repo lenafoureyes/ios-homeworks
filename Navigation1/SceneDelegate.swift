@@ -28,7 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         feedNavigationController.title = "Лента"
         
         let profileViewController = LogInViewController()
-        let profileNavigationController = UINavigationController(rootViewController: profileViewController)
+        let profileNavigationController = UINavigationController(rootViewController: LogInViewController())
         profileNavigationController.title = "Профиль"
 
 
@@ -38,7 +38,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         feedNavigationController.tabBarItem = UITabBarItem(title: "лента", image: UIImage(systemName: "doc.richtext"), tag: 0)
         profileNavigationController.tabBarItem = UITabBarItem(title: "профиль", image: UIImage(systemName: "person.circle"), tag: 1)
         
-        tabBarController.selectedIndex = 1
+        tabBarController.selectedIndex = 0
         
         
         window.rootViewController = tabBarController
