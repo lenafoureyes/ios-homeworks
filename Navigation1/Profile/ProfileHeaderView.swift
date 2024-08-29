@@ -66,12 +66,14 @@ class ProfileHeaderView: UIView, UICollectionViewDataSource, UICollectionViewDel
     }()
     
     weak var navigationController: UINavigationController?
-    
+    var avatarTapHandler: (() -> Void)?
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupCollectionView()
         setupViews()
         setupConstraints()
+        addTapGestureToAvatar()
     }
     
     required init?(coder: NSCoder) {
@@ -79,6 +81,18 @@ class ProfileHeaderView: UIView, UICollectionViewDataSource, UICollectionViewDel
         setupCollectionView()
         setupViews()
         setupConstraints()
+        addTapGestureToAvatar()
+    }
+    
+    private func addTapGestureToAvatar() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(avatarTapped))
+        avatarImageView.isUserInteractionEnabled = true
+        avatarImageView.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc private func avatarTapped() {
+        avatarTapHandler?()
+        
     }
     
     private func setupCollectionView() {
@@ -140,7 +154,6 @@ class ProfileHeaderView: UIView, UICollectionViewDataSource, UICollectionViewDel
             collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 12),
             collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            
         ])
     }
     
@@ -156,7 +169,6 @@ class ProfileHeaderView: UIView, UICollectionViewDataSource, UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let photosViewController = PhotosViewController()
-        
         navigationController?.pushViewController(photosViewController, animated: true)
     }
     

@@ -27,7 +27,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let feedNavigationController = UINavigationController(rootViewController: FeedViewController())
         feedNavigationController.title = "Лента"
         
-        let profileViewController = LogInViewController()
         let profileNavigationController = UINavigationController(rootViewController: LogInViewController())
         profileNavigationController.title = "Профиль"
 
