@@ -25,7 +25,6 @@ class ProfileViewController: UIViewController {
         headerView?.navigationController = self.navigationController
         tableView.tableHeaderView = headerView
 
-        // Set tap handler for avatar
         headerView?.avatarTapHandler = { [weak self] in
             self?.showAvatarDetail()
         }
@@ -76,26 +75,23 @@ class ProfileViewController: UIViewController {
 
     private func showAvatarDetail() {
         guard let headerView = headerView else { return }
-        avatarImageView = headerView.avatarImageView
-        
-        guard let avatarImageView = avatarImageView else { return }
+        let avatarImageView = headerView.avatarImageView
+
+
+        // Удаляем аватар из headerView и добавляем его в основной view
+        avatarImageView.removeFromSuperview()
+        view.addSubview(avatarImageView)
+        avatarImageView.translatesAutoresizingMaskIntoConstraints = true
 
         let screenWidth = UIScreen.main.bounds.width
         let screenHeight = UIScreen.main.bounds.height
-        
-        // Ensure avatar image view is above the overlay view
-        view.bringSubviewToFront(avatarImageView)
-        view.bringSubviewToFront(closeButton)
 
         UIView.animate(withDuration: 0.5, animations: {
-            // Resize avatar image view
             avatarImageView.frame = CGRect(x: 0, y: (screenHeight - screenWidth * (avatarImageView.frame.height / avatarImageView.frame.width)) / 2, width: screenWidth, height: screenWidth * (avatarImageView.frame.height / avatarImageView.frame.width))
             avatarImageView.layer.cornerRadius = 0
-            
-            // Show overlay view
+
             self.overlayView.isHidden = false
         }) { _ in
-            // Animate close button appearance
             UIView.animate(withDuration: 0.3, animations: {
                 self.closeButton.alpha = 1.0
             })
@@ -123,7 +119,6 @@ class ProfileViewController: UIViewController {
 
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        // Ensure avatar image view is correctly sized
         if let avatarImageView = avatarImageView {
             let screenWidth = UIScreen.main.bounds.width
             avatarImageView.frame.size.width = screenWidth
